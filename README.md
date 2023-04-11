@@ -95,4 +95,9 @@ For e.g, Below chart shows how time of the day influences coffee coupons. Mornin
 
 ![Summary](./docs/images/coffee_time.png)
 
-More analysis is in the notebook linked [here](./Coupon%20Data%20Analysis.ipynb). Thanks
+More analysis is in the notebook linked [here](./Coupon%20Data%20Analysis.ipynb). 
+
+### Next Steps
+
+1. Continue the analysis combining multiple demographic dimensions.
+2. Create a model that takes the demographics and provide a prediction of coupon acceptance.
