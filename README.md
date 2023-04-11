@@ -59,6 +59,40 @@ The attributes of this data set include:
 3. Jupyter Notebook for compute
 
 
-### Data Analyis & Preparation
+### Data Preparation
 
+#### Data Shape
 
+![Data Shape](./docs/images/data_shape.png)
+
+#### Data Cleansing
+
+> Please see the [notebook](./Coupon%20Data%20Analysis.ipynb) for Detailed Cleanup
+
+1. Car column had mostly nulls - so dropped the column.
+2. Columns like behavioural info like Bar, CoffeHouse had nulls. But in most of them had one column filled in. So dropped the rows that has all of these behavioural info null.
+3. Direction_same & Direction_opp doesn't have to seperate columns - if boolean could be reported easily - so consolidated the column.
+4. Cleaned up "Y" column to have a textual value - "Accepted/Rejected" for better chart labels.
+5. Converted Age to number to write better logical queries.
+6. There were about 72 duplicate records and dropped them.
+
+#### Observations & Hypothesis
+
+![Summary](./docs/images/observations_summary.png)
+
+There are multiple factors influenced the coupon acceptance ratio in the data provided.
+
+1. Overall, Small Restaurants & Carry out coupons had a larger coupon acceptance ratio.
+2. When customers travel to a non-urgent place, acceptance ratio was higer.
+3. Sunny days had the larger coupon acceptance ratio
+4. If coupons had a longer expiration, the acceptance rate was higher.
+5. While age had varying degrees of influence, ages between 20 and 30 had the most acceptance ratio on coupons.
+6. Passangers had an influence on the coupon acceptance ratio.
+
+Drilling down to a particular type of coupon had interesting observations as well.
+
+For e.g, Below chart shows how time of the day influences coffee coupons. Mornings are evening times are more likely to accept coffee coupons.
+
+![Summary](./docs/images/coffee_time.png)
+
+More analysis is in the notebook linked [here](./Coupon%20Data%20Analysis.ipynb). Thanks
